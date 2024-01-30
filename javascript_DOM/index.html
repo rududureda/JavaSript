@@ -1,0 +1,44 @@
+<!-- Destytojo mokymai -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">Hellooo</h1>
+    <h2 class="subtitle">How are you?</h2>
+    <h2 class="subtitle">I'm okey</h2>
+    <h2 class="subtitle">Nice to hear</h2>
+    <button>change styles</button>
+
+    <script>
+      let myTitle = document.getElementById('title');
+      myTitle.innerHTML = 'Goodbye';
+      console.log(myTitle);
+
+      let mySubtitle = document.querySelectorAll('.subtitle');
+
+      document.querySelector('button').addEventListener('click', () => {
+        myTitle.style.color = 'orange';
+        myTitle.style.backgroundColor = 'black';
+
+        mySubtitle.forEach((element, ind) => {
+          if (ind % 2 === 0) {
+            element.style.color = 'red';
+            element.style.backgroundColor = 'black';
+          }
+        });
+      });
+
+      myTitle.addEventListener('mouseover', () => {
+        myTitle.style.fontSize = '4rem';
+      });
+
+      myTitle.addEventListener('mouseout', () => {
+        myTitle.style.fontSize = '2rem';
+      });
+    </script>
+  </body>
+</html>

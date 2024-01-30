@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .row-style-one {
+        color: white;
+        background-color: black;
+      }
+      .row-style-two {
+        color: orange;
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="names">Names</button>
+    <button id="surnames">Surnames</button>
+    <button onclick="removeStyles()">Remove styles</button>
+    <button id="switchStyles">Switch styles</button>
+
+    <script>
+      // array of guests names
+      let guests = ['John', 'Mary', 'Peter', 'Jane', 'Mark', 'Sue'];
+      let surnames = ['Smith', 'Doe', 'Jackson', 'Doe', 'Smith', 'Jackson'];
+
+      // create div as a container
+      let container = document.createElement('div');
+
+      // add container to the body at the beggining
+      document.body.appendChild(container);
+
+      function printList(arr) {
+        container.innerHTML = '';
+        arr.forEach((name, ind) => {
+          // create a div for each guest
+          let element = document.createElement('div');
+          element.textContent = name;
+
+          element.id = 'colored';
+
+          // apply styles for every second guest
+          ind % 2 !== 0
+            ? element.classList.add('row-style-one')
+            : element.classList.add('row-style-two');
+
+          container.appendChild(element);
+        });
+      }
+
+      document.getElementById('names').addEventListener('click', () => {
+        printList(guests);
+      });
+
+      document.getElementById('surnames').addEventListener('click', () => {
+        printList(surnames);
+      });
+
+      function removeStyles() {
+        document.querySelectorAll('#colored').forEach((element) => {
+          element.classList.remove('row-style-one', 'row-style-two');
+        });
+      }
+
+      document.getElementById('switchStyles').addEventListener('click', () => {
+        document.querySelectorAll('#colored').forEach((element) => {
+          if (element.classList.contains('row-style-one')) {
+            element.classList.replace('row-style-one', 'row-style-two');
+          } else if (element.classList.contains('row-style-two')) {
+            element.classList.replace('row-style-two', 'row-style-one');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

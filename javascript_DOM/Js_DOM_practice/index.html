@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kepykla</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="block_wrapper">
+      <h1>Kepykla</h1>
+    </header>
+
+    <div class="info_wrapper block_wrapper">
+      <h2>Pradine informacija</h2>
+      <div class="input_wrapper">
+        <label for="employee_count">Darbuotoju skaicius:</label>
+        <input id="employee_count" tupe="number" min="0" step="1" value="0" />
+        <span class="error">Ivesta netinkama informacija.</span>
+      </div>
+      <div class="input_wrapper">
+        <label for="employee_makes_per_day"
+          >Vieno darbuotojo duonos kepalu per diena:</label
+        >
+        <input
+          id="employee_makes_per_day"
+          tupe="number"
+          min="0"
+          step="1"
+          value="0"
+        />
+      </div>
+      <div class="input_wrapper">
+        <label for="day_reservations">Kiek uzsakymu per diena:</label>
+        <input id="day_reservations" tupe="number" min="0" step="1" value="0" />
+      </div>
+      <button id="calculate">Skaiciuoti</button>
+      <button id="reset">Viskas is naujo</button>
+    </div>
+
+    <div class="calculation_wrapper block_wrapper">
+      <h2>Skaiciavimai</h2>
+      <div id="results">
+        <p>kolkas nieko nera.</p>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
