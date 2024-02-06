@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receptai</title>
+    <link rel="stylesheet" href="styles_receptai.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="Pirmas-blokas">
+        <h1>Pasirinkite recepta:</h1>
+        <div class="visi-receptai">
+          <div id="Pirmas-receptas">
+            <img src="./images/Vistiena su salotomis.jpg" alt="" />
+            <h2 id="button-vistienos">Vistiena su salotomis</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+              magnam nemo, praesentium explicabo consequatur illo minus itaque
+              eligendi vero cum!
+            </p>
+          </div>
+          <div id="antras-receptas">
+            <img src="./images/Tortas su melynem.jpg" alt="" />
+            <h2 id="tortas">Tortas su melynem</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+              magnam nemo, praesentium explicabo consequatur illo minus itaque
+              eligendi vero cum!
+            </p>
+          </div>
+          <div id="trecias-receptas">
+            <img src="./images/Makaronu receptas.jpg" alt="" />
+            <h2 id="makaronai">Makaronai su mesa</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+              magnam nemo, praesentium explicabo consequatur illo minus itaque
+              eligendi vero cum!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="antras-blokas">
+        <label for="porcijos">Kiek porcijų gaminsite?</label>
+        <br />
+        <input id="porcijos" type="text" />
+      </div>
+      <!-- <div id="antras-blokas">
+        <div class="range" style="--step: 7; --min: 1; --max: 6">
+          <label for="">Kiek porcijų gaminsite?</label>
+          <br />
+          <input
+            type="range"
+            min="0"
+            max="6"
+            step="1"
+            data-orientation="vertical"
+          />
+        </div>
+      </div> -->
+      <!-- <div class="slider">
+        <label for="">Kiek porcijų gaminsite?</label>
+        <br />
+        <input
+          class="slider"
+          id="porcijos"
+          type="range"
+          min="1"
+          max="6"
+          step="1"
+          list="myRange"
+        />
+        <datalist id="myRange">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </datalist>
+      </div> -->
+      <div class="rezultatai">
+        <h1>Jums reikės šių ingredientų, tokiais kiekiais:</h1>
+        <h2 id="rezults-box"></h2>
+      </div>
+    </div>
+
+    <script src="index_receptai.js"></script>
+  </body>
+</html>
